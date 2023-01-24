@@ -30,6 +30,7 @@ h1 {
     font-size: 35px;
     background-color:darkslateblue;
     border-radius: 10px;
+    border: none;
 }
 
 #startBut:hover {
