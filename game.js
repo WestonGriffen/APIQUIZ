@@ -6,7 +6,7 @@ var startBtn = document.querySelector("startBut");
 
 function countdown() {
  
-    timeleft = 101;
+    timeleft = 51;
      var downloadTimer = setInterval(function(){
      timeleft--;
      document.getElementById("countdown").textContent = timeleft;
