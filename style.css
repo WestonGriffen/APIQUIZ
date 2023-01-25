@@ -1,8 +1,12 @@
 nav {
     display: flex;
     justify-content: space-between;
+    font-size: 30px;
 }
 
+a {
+    text-decoration: none;
+}
 .container {
     max-width: 1000px;
     margin: auto;
@@ -31,12 +35,66 @@ h1 {
     background-color:darkslateblue;
     border-radius: 10px;
     border: none;
+    text-decoration: none;
 }
 
 #startBut:hover {
+    cursor: pointer;
     background-color: #918ab9;
 }
 
 #startBut:active {
     border: 3px solid #1E90FF;
+}
+
+#end {
+    display: flex;
+    flex-direction: column;
+}
+
+#username {
+    width: 200px;
+    height: 30px;
+    margin: 10px 0px;
+}
+
+#saveScoreBtn {
+    margin: 10px 0px;
+    color: white;
+    width: 200px;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    background-color:darkslateblue;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+}
+
+#saveScoreBtn:hover{
+    cursor: pointer;
+    background-color: #918ab9;
+}
+
+.btn {
+    color: white;
+    width: 200px;
+    height: 50px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    background-color:darkslateblue;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #918ab9;
 }
