@@ -2,6 +2,20 @@ const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
+var startBtn = document.querySelector("startBut");
+
+function countdown() {
+ 
+    timeleft = 101;
+     var downloadTimer = setInterval(function(){
+     timeleft--;
+     document.getElementById("countdown").textContent = timeleft;
+     if(timeleft <= 0)
+         clearInterval(downloadTimer);
+     },1000);
+
+ }
+countdown();
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -91,6 +105,9 @@ choices.forEach(choice => {
 
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS);
+            timeleft += 5;
+        } else {
+            timeleft -= 10;
         }
 
         selectedChoice.parentElement.classList.add(classToApply);
