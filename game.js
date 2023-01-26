@@ -6,12 +6,12 @@ var startBtn = document.querySelector("startBut");
 
 function countdown() {
  
-    timeleft = 51;
+    timeleft = 5;
      var downloadTimer = setInterval(function(){
      timeleft--;
      document.getElementById("countdown").textContent = timeleft;
-     if(timeleft <= 0) {
-        window.location.assign('end.html');
+     if(timeleft <= 0){
+        getNewQuestion();
      }
      if(timeleft <= 0)
          clearInterval(downloadTimer);
@@ -74,7 +74,7 @@ startGame = () => {
 }
 
 getNewQuestion = () => {
-    if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
+    if(timeleft <= 0 || availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score);
 
         return window.location.assign('end.html');
