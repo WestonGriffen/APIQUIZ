@@ -1,10 +1,9 @@
-
-Phiphatphon Lee 
+# Phiphatphon Lee 
 ## 
 most of javascript 
 
 
-Weston Giffen
+# Weston Giffen
 
-##
+## 
 html and css
