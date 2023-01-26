@@ -2,7 +2,7 @@ const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
-var startBtn = document.querySelector("startBut");
+var startBtn = document.querySelector("startBut");  
 
 function countdown() {
  
@@ -10,10 +10,14 @@ function countdown() {
      var downloadTimer = setInterval(function(){
      timeleft--;
      document.getElementById("countdown").textContent = timeleft;
+     if(timeleft <= 0) {
+        window.location.assign('end.html');
+     }
      if(timeleft <= 0)
          clearInterval(downloadTimer);
-     },1000);
+     },1000)
 
+    
  }
 countdown();
 
